@@ -1,0 +1,24 @@
+#DROPOUT
+In neural networks, a dropout layer is a technique used to prevent overfitting. Overfitting occurs when a model learns to perform well on the training data but doesn't generalize well to new, unseen data. Dropout helps prevent overfitting by randomly "dropping out" (ignoring) some neurons during training.
+
+Imagine you're learning to play a new game by practicing with a friend. However, you notice that you're getting really good at playing with your friend, but when you try to play with others, you don't perform as well. This is because you've become too dependent on your friend's playing style.
+
+In neural networks, each neuron learns to recognize certain patterns in the data. However, if some neurons become too specialized and rely too much on each other, they may not learn to recognize patterns on their own. This can lead to overfitting.
+
+To prevent this, dropout randomly "turns off" some neurons during each training step. It's like practicing the game with different friends each time, so you don't become too dependent on any one playing style. This encourages each neuron to learn more independently and makes the model more robust to different patterns in the data.
+
+During inference (when the model is making predictions on new data), dropout is turned off, and all neurons are used. This ensures that the model can make accurate predictions without dropout's randomness.
+
+In summary, dropout is like adding a bit of randomness to the training process to prevent neurons from relying too much on each other, thus improving the model's ability to generalize to new, unseen data.
+
+
+#BASELINE DNN
+A baseline Deep Neural Network (DNN) is the simplest version of a neural network model used as a starting point for a specific task. It serves as a reference point or initial benchmark against which more complex models can be compared.
+
+Imagine you're trying to build a model to predict whether a given email is spam or not spam (ham). You start with a baseline DNN, which might consist of:
+
+Input Layer: This layer takes in features of the email, such as the frequency of certain words or characters.
+
+Hidden Layer(s): These layers process the input features and learn patterns in the data. In a baseline DNN, there might be one or two hidden layers with a moderate number of neurons. Each neuron in these layers combines input information in different ways to learn patterns.
+
+Output Layer: This layer produces the final prediction. Since it's a binary classification task (spam or not spam), the output layer might consist of a single neuron with a sigmoid activation function, which outputs a value between 0 and 1 representing the probability of the email being spam.
